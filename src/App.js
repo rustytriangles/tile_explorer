@@ -4,6 +4,7 @@ import {getTiePointIndices, makePolygonPoints, makePathPoints} from './tile.js';
 import {tile_sets} from './path_data.js';
 
 // Returns an SVG path which draws a polygon
+//
 // num_sides - # of sides
 // cx, cy - Center
 // radius - The radius
@@ -27,6 +28,14 @@ function makePolygon(num_sides, cx, cy, radius, props) {
                  d={path_data} />
 }
 
+// Returns a set of SVG paths which draw the paths for the specified tile.
+//
+// num_sides - # of sides of the polygon
+// num_ends - # of path ends on each side of the polygon
+// tile_index - The index into that set of tiles
+// cx, cy - Center of the polygon
+// radius - The radious of the polygon
+// props - The properties of the SVG paths
 function makePaths(num_sides, num_ends, tile_index, cx, cy, radius, props) {
     const tieIndices = getTiePointIndices(num_sides, num_ends, tile_index);
     const tiePoints = makePathPoints(tieIndices, num_sides, num_ends, cx, cy, radius);
@@ -48,6 +57,7 @@ function makePaths(num_sides, num_ends, tile_index, cx, cy, radius, props) {
     return <> {fun(tiePoints)} </>
 }
 
+// Combines the polygon and the paths
 function makeTile(num_sides, num_ends, tile_index) {
     const borderProps = {
         fillStyle: "none",
@@ -69,6 +79,7 @@ function makeTile(num_sides, num_ends, tile_index) {
            </svg>
 }
 
+// A React component which allows you to step through sets of path tiles.
 class TileViewer extends React.Component {
     constructor(props) {
         super(props);
