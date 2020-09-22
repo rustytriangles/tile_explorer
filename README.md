@@ -1,6 +1,8 @@
 An updated version of my [old Processing sketch](https://blog.garritys.org/2012/01/tile-explorer.html) that draws
 various path tiles.
 
+![screenshot](images/screenshot.png)
+
 For more info on the combinatorics of these tiles, see [A132100](https://oeis.org/A132100) of the [Online Encyclopedia of Integer Sequences](http://oeis.org).
 
 This draws the tiles using a React component called TileViewer which is implemented in SVG. It has handlers for the arrow keys which allow you to step through the different tiles. You might have to click to ensure that the TileViewer has focus before using the arrow keys.
@@ -21,7 +23,7 @@ You will also see any lint errors in the console.
 
 Launches the test runner in the interactive watch mode.<br />
 
-To get code coverage, do <pre>npm test -- --coverage</pre>.
+To get code coverage, do <pre>npm test -- --coverage</pre>
 
 * npm run build
 
