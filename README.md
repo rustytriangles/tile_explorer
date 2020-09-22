@@ -34,3 +34,4 @@ It correctly bundles React in production mode and optimizes the build for the be
 
 * [react](https://reactjs.org/) - React
 * [jest](https://jestjs.io/), [jest-dom](https://github.com/testing-library/jest-dom), & [jest-extended](https://github.com/jest-community/jest-extended) - Jest unittest framework
+* [gh-pages](npmjs.com/package/gh-pages) - Utility for publishing to github pages
